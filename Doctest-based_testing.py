@@ -1,4 +1,4 @@
-f median(pool):
+def median(pool):
 
     """Statistical median to demonstrate doctest.
 

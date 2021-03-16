@@ -1,5 +1,5 @@
 def calculate_total_price(m, n, s):
-    total_price = (m + n/100) * s
+    total_price = (m + n / 100) * s
     return total_price
 
 

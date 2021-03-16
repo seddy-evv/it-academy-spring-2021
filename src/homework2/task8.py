@@ -168,7 +168,7 @@ def parts_sums(list_):
         previous1 = list_[bypass]
         list_[bypass] = sum_ - previous
         previous += previous1
-    return list_+[0]
+    return list_ + [0]
 
 
 print(parts_sums([1, 2, 3, 4, 5, 6]))

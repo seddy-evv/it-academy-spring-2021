@@ -94,7 +94,7 @@ Create a function that takes a Roman numeral as its argument and returns its val
 as a numeric decimal integer.
 You don't need to validate the form of the Roman numeral.
 
-Modern Roman numerals are written by expressing each decimal digit of the number 
+Modern Roman numerals are written by expressing each decimal digit of the number
 to be encoded separately, starting with the leftmost digit and skipping any 0s.
 So 1990 is rendered "MCMXC" (1000 = M, 900 = CM, 90 = XC) and
 2008 is rendered "MMVIII" (2000 = MM, 8 = VIII). The Roman numeral for 1666, "MDCLXVI",
@@ -154,7 +154,7 @@ ls = [1, 2, 3, 4, 5, 6]
 parts_sums(ls) -> [21, 20, 18, 15, 11, 6, 0]
 
 ls = [744125, 935, 407, 454, 430, 90, 144, 6710213, 889, 810, 2579358]
-parts_sums(ls) -> [10037855, 9293730, 9292795, 9292388, 9291934, 9291504, 
+parts_sums(ls) -> [10037855, 9293730, 9292795, 9292388, 9291934, 9291504,
                    9291414, 9291270, 2581057, 2580168, 2579358,0]
 Notes
 Take a look at performance: some lists have thousands of elements.

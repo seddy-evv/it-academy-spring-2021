@@ -3,7 +3,8 @@ Your function takes two arguments:
 
 1. current father's age (years)
 2. current age of his son (years)
-Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old)."""
+Сalculate how many years ago the father was twice as old as his son
+(or in how many years he will be twice as old)."""
 
 
 def twice_as_old(dad_years_old, son_years_old):
@@ -19,8 +20,8 @@ def twice_as_old(dad_years_old, son_years_old):
 print(twice_as_old(60, 35))
 
 """ Second task
-An ordered sequence of numbers from 1 to N is given. One number might have deleted from it, 
-    then the remaining numbers were mixed. Find the number that was deleted.
+An ordered sequence of numbers from 1 to N is given. One number might have deleted from it,
+then the remaining numbers were mixed. Find the number that was deleted.
 
 Example:
 
@@ -30,7 +31,8 @@ The mixed array with one deleted number is [3,2,4,6,7,8,1,9]
 
 Your function should return the int 5.
 
-If no number was deleted from the array and no difference with it, your function should return the int 0.
+If no number was deleted from the array and no difference with it,
+your function should return the int 0.
 
 Note: N may be 1 or less (in the latter case, the first array will be [])."""
 
@@ -49,8 +51,8 @@ print(find_deleted_number(arr_test, mixed_arr_test))
 
 """ Third task
 
-Given a string, turn each character into its ASCII character code and join them together to create a number - 
-let's call this number total1:
+Given a string, turn each character into its ASCII character code
+and join them together to create a number - let's call this number total1:
 
 'ABC' --> 'A' = 65, 'B' = 66, 'C' = 67 --> 656667
 Then replace any incidence of the number 7 with the number 1, and call this number 'total2':
@@ -88,12 +90,14 @@ print(calc("ABC"))
 
 """ Third task
 
-Create a function that takes a Roman numeral as its argument and returns its value as a numeric decimal integer.
+Create a function that takes a Roman numeral as its argument and returns its value
+as a numeric decimal integer.
 You don't need to validate the form of the Roman numeral.
 
-Modern Roman numerals are written by expressing each decimal digit of the number to be encoded separately, 
-starting with the leftmost digit and skipping any 0s. So 1990 is rendered "MCMXC" (1000 = M, 900 = CM, 90 = XC) and 
-2008 is rendered "MMVIII" (2000 = MM, 8 = VIII). The Roman numeral for 1666, "MDCLXVI", 
+Modern Roman numerals are written by expressing each decimal digit of the number 
+to be encoded separately, starting with the leftmost digit and skipping any 0s.
+So 1990 is rendered "MCMXC" (1000 = M, 900 = CM, 90 = XC) and
+2008 is rendered "MMVIII" (2000 = MM, 8 = VIII). The Roman numeral for 1666, "MDCLXVI",
 uses each letter in descending order.
 
 Example:
@@ -142,15 +146,16 @@ ls = [10]
 ls = []
 The corresponding sums are (put together in a list): [20, 20, 19, 16, 10, 0]
 
-The function parts_sums (or its variants in other languages) will take as parameter a list ls and return a list of the 
-sums of its parts as defined above.
+The function parts_sums (or its variants in other languages) will take
+as parameter a list ls and return a list of the sums of its parts as defined above.
 
 Other Examples:
-ls = [1, 2, 3, 4, 5, 6] 
+ls = [1, 2, 3, 4, 5, 6]
 parts_sums(ls) -> [21, 20, 18, 15, 11, 6, 0]
 
 ls = [744125, 935, 407, 454, 430, 90, 144, 6710213, 889, 810, 2579358]
-parts_sums(ls) -> [10037855, 9293730, 9292795, 9292388, 9291934, 9291504, 9291414, 9291270, 2581057, 2580168, 2579358,0]
+parts_sums(ls) -> [10037855, 9293730, 9292795, 9292388, 9291934, 9291504, 
+                   9291414, 9291270, 2581057, 2580168, 2579358,0]
 Notes
 Take a look at performance: some lists have thousands of elements.
 Please ask before translating.

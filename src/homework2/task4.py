@@ -1,5 +1,5 @@
 def calculate_letters(text):
-    uppercase_alphabet = ("ABCDEFGHIJKLMNO" 
+    uppercase_alphabet = ("ABCDEFGHIJKLMNO"
                           "PQRSTUVWXYZ")
     lower_case_alphabet = uppercase_alphabet.lower()
     upper = 0

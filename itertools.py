@@ -1,4 +1,7 @@
+# Task1 - 1 line
 from itertools import groupby
+
+
 lines = ('\n'
          'This is the\n'
          'first paragraph.\n'

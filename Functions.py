@@ -1,3 +1,6 @@
+# Task1 - 1 line
+
+
 def greet(name):
     print('Hello', name)
 

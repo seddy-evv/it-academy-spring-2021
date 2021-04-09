@@ -1,3 +1,6 @@
+# Task3 - List practice
+
+
 import copy
 
 lst1 = [element + element1 for element in 'ab' for element1 in 'bcd']

@@ -1,3 +1,6 @@
+# The function removes duplicate characters and spaces from the string.
+
+
 def replace_duplicate(text):
     clean_text = text.replace(" ", "")
     new_str = ""

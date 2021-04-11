@@ -1,3 +1,7 @@
+# The function counts the number of uppercase and lowercase letters in a line,
+# only English letters are taken into account.
+
+
 def calculate_letters(text):
     uppercase_alphabet = ("ABCDEFGHIJKLMNO"
                           "PQRSTUVWXYZ")

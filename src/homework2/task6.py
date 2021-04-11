@@ -1,3 +1,6 @@
+# The function checks if the number is a palindrome.
+
+
 def palindrome(origin_number):
     total_number = 0
     num = origin_number

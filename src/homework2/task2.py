@@ -1,6 +1,9 @@
+# The function finds the longest word in a sentence.
+import re
+
+
 def return_longest_word(text):
-    clean_text = text.replace(",", "")
-    clean_text = clean_text.replace(".", "")
+    clean_text = re.sub(r"[^\w\s]", "", text)
     strings = clean_text.split()
     longest_word = ""
     for current_str in strings:

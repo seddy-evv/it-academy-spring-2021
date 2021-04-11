@@ -1,3 +1,8 @@
+# Initial data: three sides of a triangle. The function checks if these are the sides
+# of the triangle. If the sides define a triangle, finds its area.
+# If not, displays an invalid data message.
+
+
 def calculate_area_triangle(a, b, c):
     if a + b > c and a + c > b and b + c > a:
         p = (a + b + c) / 2

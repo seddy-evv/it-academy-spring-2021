@@ -14,6 +14,6 @@ def count_different_words(text):
 
 
 rand_text = """Walking, running, cycling and and
-              playing football are some kinds 
+              playing football are some kinds
               of sports that     you do every day day"""
 count_different_words(rand_text)

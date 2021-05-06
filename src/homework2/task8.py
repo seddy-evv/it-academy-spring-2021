@@ -296,19 +296,19 @@ def mix(s1, s2):
         sum_string2 = dict_s2.get(el, 0)
         if sum_string1 > sum_string2 and sum_string1 > 1:
             list_of_letters[sum_string1] = list_of_letters[sum_string1] + "1:" \
-                                           + el * sum_string1 + "/"
+                                        + el * sum_string1 + "/"
     for el in letters:
         sum_string1 = dict_s1.get(el, 0)
         sum_string2 = dict_s2.get(el, 0)
         if sum_string1 < sum_string2 and sum_string2 > 1:
             list_of_letters[sum_string2] = list_of_letters[sum_string2] + "2:" \
-                                           + el * sum_string2 + "/"
+                                        + el * sum_string2 + "/"
     for el in letters:
         sum_string1 = dict_s1.get(el, 0)
         sum_string2 = dict_s2.get(el, 0)
         if sum_string1 == sum_string2 and sum_string1 > 1:
             list_of_letters[sum_string1] = list_of_letters[sum_string1] + "=:" \
-                                           + el * sum_string1 + "/"
+                                        + el * sum_string1 + "/"
     list_of_letters.reverse()
     return("".join(list_of_letters)).strip("/")
 

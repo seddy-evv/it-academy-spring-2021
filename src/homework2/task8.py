@@ -290,27 +290,24 @@ def mix(s1, s2):
         if el in letters:
             dict_s2[el] = dict_s2.get(el, 0) + 1
             max_len = dict_s2[el] if dict_s2[el] > max_len else max_len
-    list_of_letters = ["" for _ in range(max_len + 1)]
+    list_letters = ["" for _ in range(max_len + 1)]
     for el in letters:
         sum_string1 = dict_s1.get(el, 0)
         sum_string2 = dict_s2.get(el, 0)
         if sum_string1 > sum_string2 and sum_string1 > 1:
-            list_of_letters[sum_string1] = list_of_letters[sum_string1] + "1:" \
-                                        + el * sum_string1 + "/"
+            list_letters[sum_string1] = list_letters[sum_string1] + "1:" + el * sum_string1 + "/"
     for el in letters:
         sum_string1 = dict_s1.get(el, 0)
         sum_string2 = dict_s2.get(el, 0)
         if sum_string1 < sum_string2 and sum_string2 > 1:
-            list_of_letters[sum_string2] = list_of_letters[sum_string2] + "2:" \
-                                        + el * sum_string2 + "/"
+            list_letters[sum_string2] = list_letters[sum_string2] + "2:" + el * sum_string2 + "/"
     for el in letters:
         sum_string1 = dict_s1.get(el, 0)
         sum_string2 = dict_s2.get(el, 0)
         if sum_string1 == sum_string2 and sum_string1 > 1:
-            list_of_letters[sum_string1] = list_of_letters[sum_string1] + "=:" \
-                                        + el * sum_string1 + "/"
-    list_of_letters.reverse()
-    return("".join(list_of_letters)).strip("/")
+            list_letters[sum_string1] = list_letters[sum_string1] + "=:" + el * sum_string1 + "/"
+    list_letters.reverse()
+    return("".join(list_letters)).strip("/")
 
 
 print(mix("Sadus:cpms>orqn3zecwGvnznSgacs", "MynwdKizfd$lvse+gnbaGydxyXzayp"))

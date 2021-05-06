@@ -4,12 +4,12 @@
 # the additional list is not used, the movement is performed in one pass through the list.
 
 
-lst_ = [0, 1, 4, 0, 5, 0, 3, 0, 9, 7, 0]
-n = len(lst_)
-b = 0
-for k in range(n):
-    if lst_[k]:
-        lst_[b], lst_[k] = lst_[k], lst_[b]
-        b += 1
+list_of_numbers = [0, 1, 4, 0, 5, 0, 3, 0, 9, 7, 0]
+amount_of_elements = len(list_of_numbers)
+index = 0
+for n in range(amount_of_elements):
+    if list_of_numbers[n]:
+        list_of_numbers[index], list_of_numbers[n] = list_of_numbers[n], list_of_numbers[index]
+        index += 1
 
-print(lst_)
+print(list_of_numbers)

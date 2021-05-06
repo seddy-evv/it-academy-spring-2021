@@ -7,15 +7,16 @@
 
 def count_pairs(str_of_numbers):
     clean_str = str_of_numbers.replace(" ", "")
-    number_of_pairs = 0
-    line_length = len(clean_str)
-    for i in range(line_length):
-        for numb in range(i + 1, line_length):
-            if int(clean_str[i]) == int(clean_str[numb]):
-                number_of_pairs += 1
-    return number_of_pairs
+    dict_of_pairs = {}
+    sum_of_numb = {}
+    for num in clean_str:
+        sum_of_numb[num] = sum_of_numb.get(num, 0) + 1
+    for key in sum_of_numb:
+        dict_of_pairs[key] = (sum_of_numb[key] * (sum_of_numb[key] - 1)) / 2
+    number_of_pairs = sum(dict_of_pairs.values())
+    return int(number_of_pairs)
 
 
 print(count_pairs("1 1 1"))
-print(count_pairs("1 1 1 1"))
+print(count_pairs("1 1 1 1 1"))
 print(count_pairs("2 1 1 1 1 2"))

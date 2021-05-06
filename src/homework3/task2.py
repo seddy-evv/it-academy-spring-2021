@@ -9,7 +9,7 @@ print(lst1)
 lst2 = lst1[0:6:2]
 print(lst2)
 
-lst3 = [str(element) + "a" for element in range(1, 5)]
+lst3 = [element + "a" for element in "1234"]
 print(lst3)
 
 element_2a = lst3.pop(1)

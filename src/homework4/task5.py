@@ -7,15 +7,16 @@
 def languages(initial_text):
     list_of_sentences = initial_text.split("\n")
     number_of_students = int(list_of_sentences[0].strip())
-    n = 1
+    position = 1
     students_languages = {}
     for i in range(1, number_of_students + 1):
-        number_of_languages = int(list_of_sentences[n].strip())
+        number_of_languages = int(list_of_sentences[position].strip())
         languages_ = set()
-        for z in range(1, number_of_languages + 1):
-            languages_.add(list_of_sentences[n + z].strip())
+        for language in range(1, number_of_languages + 1):
+            languages_.add(list_of_sentences[position + language].strip())
+
         students_languages[i] = languages_
-        n += number_of_languages + 1
+        position += number_of_languages + 1
 
     one_students_languages = set()
     for el in students_languages.values():

@@ -4,7 +4,7 @@
 def count_numbers(list1, list2):
     set1 = set(list1)
     set2 = set(list2)
-    count_of_numbers = len(set1 - set2)
+    count_of_numbers = len(set1 ^ set2)
     print(count_of_numbers)
 
 

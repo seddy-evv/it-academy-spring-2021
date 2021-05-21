@@ -3,14 +3,7 @@
 
 
 def count_different_words(text):
-    list_of_sentence = text.split("\n")
-    list_of_words = []
-    for el in list_of_sentence:
-        list_of_words.extend(el.split())
-    set_of_words = set()
-    for el in list_of_words:
-        set_of_words.add(el)
-    print(len(set_of_words))
+    print(len({sentence for sentence in text.split()}))
 
 
 rand_text = """Walking, running, cycling and and

@@ -8,22 +8,27 @@
 # cities - string with cities
 
 
-def find_country(n, countries, m, cities):
-    list_of_countries = countries.split("\n")
-    list_of_cities = cities.split("\n")
+def find_country(n, countries_str, m, cities_str):
+    list_of_countries = countries_str.split("\n")
+    list_of_cities = cities_str.split("\n")
     country_city = {}
     for i in range(n):
-        value, *keys = list_of_countries[i].split()
-        dict_ = dict().fromkeys(keys, value)
-        country_city.update(dict_)
+        country, *cities = list_of_countries[i].split()
+        dict_ = dict().fromkeys(cities, country)
+        for city in dict_:
+            country_city[city] = dict_[city] + " " + country_city.get(city, "")
+
     for i in range(m):
         print(country_city.get(list_of_cities[i].strip()))
 
 
 string_of_countries = """Russia Moscow Petersburg Novgorod Kaluga
-                         Ukraine Kiev Donetsk Odessa"""
+                         Ukraine Donetsk Odessa
+                         Belarus Minsk Gomel Brest
+                         France Paris Brest"""
 string_of_cities = """Odessa
                       Moscow
                       Novgorod
-                      Gomel"""
-find_country(2, string_of_countries, 3, string_of_cities)
+                      Gomel
+                      Brest"""
+find_country(4, string_of_countries, 5, string_of_cities)

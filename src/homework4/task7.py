@@ -1,18 +1,17 @@
 # Implementation of the Euclidean algorithm without using functions and recursion.
 
 
-a = 459
-b = 1071
-if b > a:
-    a, b = b, a
-c = a
-while c > b:
-    while c > b:
-        c = a % b
-    if c:
-        a, b, c = b, c, a
-    else:
-        print(b)
-        break
-else:
+first_number = 459
+second_number = 4071
+if second_number > first_number:
+    first_number, second_number = second_number, first_number
+elif first_number == second_number:
     print("numbers are equal")
+
+while first_number > second_number:
+    first_number = first_number % second_number
+    if first_number:
+        first_number, second_number = second_number, first_number
+    else:
+        print(second_number)
+        break

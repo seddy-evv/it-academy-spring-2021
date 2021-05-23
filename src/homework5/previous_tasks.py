@@ -1,4 +1,4 @@
-# Homework 2
+# Homework 2.
 import re
 
 N = 7

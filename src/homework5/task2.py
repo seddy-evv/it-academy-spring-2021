@@ -1,7 +1,7 @@
 # A decorator has been created that stores the results of function calls
 # (for the entire time of calls, and not just the current run of the program).
-import os.path
 import datetime
+import os.path
 
 
 def dec(func):

@@ -1,6 +1,6 @@
 # The function "runner" calls functions from homework 2 according to the specified conditions.
-import previous_tasks
 from inspect import isfunction
+import previous_tasks
 
 
 def runner(*args):

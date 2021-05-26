@@ -1,21 +1,26 @@
 # A decorator has been created that stores the results of function calls
 # (for the entire time of calls, and not just the current run of the program).
 import os.path
+import datetime
 
 
 def dec(func):
 
     def wrapper(*args, **kwargs):
-
+        strings = {}
+        f_name = func.__name__
+        time_now = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
         if os.path.exists('text.txt'):
             with open('text.txt', 'r') as fh:
-                count_call = int(fh.read())
-        else:
-            count_call = 0
-        with open('text.txt', 'w') as fh:
-            fh.write(str(count_call + 1))
-        print(count_call + 1)
+                for line in fh:
+                    key, *value = line.split()
+                    strings[key] = " ".join(value)
 
+        strings[f_name] = str(int(strings.get(f_name, "0").split()[0]) + 1) + " " + time_now
+        print(f_name + " " + strings[f_name])
+        with open('text.txt', 'w') as fh:
+            for key, value in strings.items():
+                fh.write(key + " " + value + "\n")
         result = func(*args, **kwargs)
         return result
 
@@ -27,4 +32,11 @@ def function():
     pass
 
 
+@dec
+def function_new():
+    pass
+
+
 function()
+function_new()
+function_new()

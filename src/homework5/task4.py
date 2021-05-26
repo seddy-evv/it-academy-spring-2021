@@ -8,8 +8,13 @@ if os.path.exists('ratings.list'):
         dict_years = {}
         dict_rat = {}
         films = ""
+        start = False
         for line in fh:
-            if 27 < n < 278:
+            if line.strip() == "New  Distribution  Votes  Rank  Title":
+                start = True
+            elif line.strip() == "BOTTOM 10 MOVIES (1500+ VOTES)":
+                break
+            elif start and line.strip() != "":
                 words = line.split()
                 words = words[2:len(words)]
                 rate = words.pop(0)
@@ -17,9 +22,7 @@ if os.path.exists('ratings.list'):
                 dict_rat[rate] = dict_rat.get(rate, 0) + 1
                 dict_years[year] = dict_years.get(year, 0) + 1
                 films += " ".join(words) + "\n"
-            elif n > 278:
-                break
-            n += 1
+
     histogram_rat = ""
     histogram_years = ""
     for key, value in dict_rat.items():

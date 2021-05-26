@@ -1,5 +1,6 @@
 # The function "runner" calls functions from homework 2 according to the specified conditions.
 import previous_tasks
+from inspect import isfunction
 
 
 def runner(*args):
@@ -7,10 +8,10 @@ def runner(*args):
     for func in list_of_attr:
         attr = getattr(previous_tasks, func)
         if not args:
-            if hasattr(attr, '__call__'):
+            if isfunction(attr):
                 attr()
         else:
-            if hasattr(attr, '__call__') and func in args:
+            if isfunction(attr) and func in args:
                 attr()
 
 
